@@ -1,10 +1,21 @@
 const express = require('express')
+var {engine} = require("express-handlebars");
 const app = express()
 const port = 3000
 const path = require('path');
 
+app.engine(
+  ".handlebars",
+  engine({
+    extname : "handlebars",
+    defaultLayout : false,
+    layoutsDis : "views/layout",
+  })
+);
+
+app.set("view engine", "handlebars")
 app.use(express.static(path.join(__dirname,'static')));
-app.use("/", require(path.join(__dirname, "router/blogs.js")));
+app.use("/", require(path.join(__dirname, "routers/blogs.js")));
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
