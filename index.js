@@ -9,7 +9,7 @@ app.engine(
   engine({
     extname : "handlebars",
     defaultLayout : false,
-    layoutsDis : "views/layout",
+    layoutsDir : "views/layout",
   })
 );
 

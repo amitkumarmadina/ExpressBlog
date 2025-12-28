@@ -9,7 +9,8 @@ router.get("/", (req, res)=>{
 });
 
 router.get("/blog", (req, res)=>{
-res.sendFile(path.join(__dirname, '../templates/bloghome.html'));
+// res.sendFile(path.join(__dirname, '../templates/bloghome.html'));
+res.render("bolgHome")
 });
 
 router.get("/blogpost/:slug", (req, res)=>{
