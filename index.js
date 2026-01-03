@@ -8,8 +8,8 @@ app.engine(
   ".handlebars",
   engine({
     extname : "handlebars",
-    defaultLayout : false,
-    layoutsDir : "views/layout",
+    defaultLayout : "main",
+    layoutsDir : "views/layouts",
   })
 );
 
